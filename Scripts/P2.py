@@ -21,3 +21,60 @@ plt.ylabel('Goals scored')
 plt.show()
 
 # Winners vs losers possessions
+home_result = np.where(
+    df['winner'] == df['home_team'],
+    'Win',
+    'Loss'
+)
+
+# Home Possession Table
+home_possession = pd.DataFrame({
+    'team': df['home_team'],
+    'possession': df['possession_home'],
+    'result': home_result
+})
+
+# Away Team Result
+
+away_result = np.where(
+    df['winner'] == df['away_team'],
+    'Win',
+    'Loss'
+)
+
+# Away Possession Table
+away_possession = pd.DataFrame({
+    'team': df['away_team'],
+    'possession': df['possession_away'],
+    'result': away_result
+})
+
+# Combine Both Tables
+combined = pd.concat(
+    [home_possession, away_possession]
+)
+
+# Average Possession By Result
+avg_possession = combined.groupby(
+    'result'
+)['possession'].mean()
+
+# Convert To DataFrame
+
+avg_possession = avg_possession.reset_index()
+
+# Display Results
+print(avg_possession)
+
+# Bar Chart
+plt.figure(figsize=(8,5))
+plt.bar(
+    avg_possession['result'],
+    avg_possession['possession']
+)
+plt.title(
+    'Average Possession: Winners vs Losers'
+)
+plt.xlabel('Match Result')
+plt.ylabel('Average Possession %')
+plt.show()
