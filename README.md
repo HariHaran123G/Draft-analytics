@@ -51,3 +51,30 @@ This project explores team performance, possession efficiency, aggression metric
   - Shots
   - Passing
   - Red card
+
+### 5️⃣ Possession Efficiency Analysis
+- Measured goal-scoring efficiency relative to possession %
+- Ranked teams with highest attacking efficiency
+
+---
+
+## 📈 Skills Demonstrated
+
+- Data Cleaning & Transformation
+- Exploratory Data Analysis (EDA)
+- GroupBy & Aggregations
+- Custom KPI Creation
+- Correlation Analysis
+- Data Visualization
+- Business & Sports Insight Generation
+
+ ## 🚀 Business / Sports Insights
+
+- Higher possession does not always guarantee higher goals.
+- Certain teams demonstrate high attacking efficiency despite lower possession.
+- Teams with aggressive styles tend to accumulate more disciplinary actions.
+- Crowd attendance shows moderate correlation with home team performance.
+- Efficient teams maximize scoring opportunities with fewer possessions.
+
+---
+
